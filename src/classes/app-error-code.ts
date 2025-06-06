@@ -1,6 +1,7 @@
 /**
  * Importing npm packages
  */
+import { ServerErrorCode } from '@shadow-library/fastify';
 
 /**
  * Importing user defined packages
@@ -14,6 +15,4 @@
  * Declaring the constants
  */
 
-export function add(a: number, b: number): number {
-  return a + b;
-}
+export class AppErrorCode extends ServerErrorCode {}
