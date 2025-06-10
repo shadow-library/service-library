@@ -21,6 +21,7 @@ import { AppModule } from './app.module';
 /**
  * Declaring the constants
  */
+const gitCommit = process.env.GIT_COMMIT_SHA || 'unknown';
 
-Logger.addDefaultTransports();
+Logger.setDefaultMetadata({ gitCommit }).addDefaultTransports();
 ShadowFactory.create(AppModule).then(app => app.start());

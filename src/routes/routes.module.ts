@@ -7,6 +7,7 @@ import { HealthModule } from '@shadow-library/modules';
 /**
  * Importing user defined packages
  */
+import { ServerConfig } from '@server/services';
 
 /**
  * Defining types
@@ -17,5 +18,6 @@ import { HealthModule } from '@shadow-library/modules';
  */
 
 export const HttpRouteModule = FastifyModule.forRoot({
+  port: ServerConfig.get('server.port'),
   imports: [HealthModule],
 });
