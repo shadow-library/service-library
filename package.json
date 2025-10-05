@@ -8,7 +8,8 @@
     "clean": "rm -rf dist logs CHANGELOG.md",
     "lint": "bun run scripts/lint.ts",
     "type-check": "bun run tsc",
-    "build": "bun run scripts/build.ts"
+    "build": "bun run scripts/build.ts",
+    "dev": "bun run --watch src/main.ts"
   },
   "repository": {
     "type": "git",
@@ -23,26 +24,27 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@eslint/js": "^9.28.0",
+    "@eslint/js": "^9.37.0",
     "@release-it/conventional-changelog": "^10.0.1",
-    "@types/bun": "^1.2.15",
-    "@typescript-eslint/parser": "^8.33.1",
-    "eslint": "^9.28.0",
+    "@types/bun": "^1.2.23",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.37.0",
     "eslint-import-resolver-typescript": "^3.10.1",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import": "^2.32.0",
     "globals": "^15.15.0",
     "husky": "^9.1.7",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.2",
     "release-it": "^17.11.0",
     "tsc-alias": "^1.8.16",
     "type-fest": "^4.41.0",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.33.1"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.45.0"
   },
   "dependencies": {
-    "@shadow-library/app": "^1.0.8",
-    "@shadow-library/common": "^1.0.13",
-    "@shadow-library/fastify": "^0.0.6",
+    "@shadow-library/app": "^1.0.10",
+    "@shadow-library/class-schema": "^0.0.12",
+    "@shadow-library/common": "^1.0.21",
+    "@shadow-library/fastify": "^0.0.7",
     "@shadow-library/modules": "^0.0.2",
     "reflect-metadata": "^0.2.2"
   }
