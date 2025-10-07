@@ -27,9 +27,6 @@ export class RequestInitializerMiddleware implements AsyncHttpMiddleware {
   async use(request: HttpRequest, response: HttpResponse): Promise<void> {
     const cid = request.headers[HEADER_X_CORRELATION_ID] as string | undefined;
     request.cid = cid ?? request.id;
-    if (!cid) {
-      request.headers[HEADER_X_CORRELATION_ID] = request.cid;
-      response.header(HEADER_X_CORRELATION_ID, request.cid);
-    }
+    if (!cid) response.header(HEADER_X_CORRELATION_ID, request.cid);
   }
 }
