@@ -48,8 +48,8 @@
     "@scalar/fastify-api-reference": "^1.37.0",
     "@shadow-library/app": "^1.0.10",
     "@shadow-library/class-schema": "^0.0.12",
-    "@shadow-library/common": "^1.0.21",
-    "@shadow-library/fastify": "^0.0.9",
+    "@shadow-library/common": "^1.0.22",
+    "@shadow-library/fastify": "^0.0.10",
     "@shadow-library/modules": "^0.0.2",
     "ajv": "^8.17.1",
     "reflect-metadata": "^0.2.2"
