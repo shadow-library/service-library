@@ -10,7 +10,6 @@ import { OpenAPIV3 } from 'openapi-types';
 /**
  * Importing user defined packages
  */
-import { ServerConfig } from '@server/services';
 
 import { RequestInitializerMiddleware } from './request-initializer.middleware';
 
@@ -30,7 +29,7 @@ export const HttpRouteModule = FastifyModule.forRoot({
   imports: [HealthModule],
   controllers: [RequestInitializerMiddleware],
 
-  port: ServerConfig.get('server.port'),
+  port: Config.get('server.port'),
   fastifyFactory: async instance => {
     await instance.register(cookie);
 
