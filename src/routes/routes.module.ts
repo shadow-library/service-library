@@ -29,6 +29,7 @@ export const HttpRouteModule = FastifyModule.forRoot({
   imports: [HealthModule],
   controllers: [RequestInitializerMiddleware],
 
+  host: Config.get('server.host'),
   port: Config.get('server.port'),
   fastifyFactory: async instance => {
     await instance.register(cookie);

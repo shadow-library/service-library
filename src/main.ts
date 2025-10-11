@@ -1,4 +1,9 @@
 /**
+ * Importing packages with side effects
+ */
+import 'reflect-metadata';
+
+/**
  * Importing npm packages
  */
 import path from 'node:path';
